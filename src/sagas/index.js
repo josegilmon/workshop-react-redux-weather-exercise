@@ -3,6 +3,6 @@ import * as weatherSagas from './weather'
 
 export default function * root () {
   yield [
-    fork(weatherSagas.watchExample)
+    fork(weatherSagas.watchFetchWeather)
   ]
 }

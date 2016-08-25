@@ -2,7 +2,6 @@ import {expect} from 'chai'
 import weatherActionsTypes from '../../../src/constants/actions/weather'
 import weatherActions from '../../../src/actions/weather'
 
-
 describe('actions', () => {
   describe('weather', () => {
     it('setSearchText should create SET_SEARCH_TEXT action', () => {
@@ -14,9 +13,9 @@ describe('actions', () => {
       expect(weatherActions.fetchWeather()).deep.equal({ type: weatherActionsTypes.FETCH_WEATHER })
     })
 
-    it('fetchWeatherSucces should create FETCH_WEATHER_SUCCESS action', () => {
+    it('fetchWeatherSuccess should create FETCH_WEATHER_SUCCESS action', () => {
       const weatherList = [{name: 'Test'}]
-      expect(weatherActions.fetchWeatherSucces(weatherList)).deep.equal({ type: weatherActionsTypes.FETCH_WEATHER_SUCCESS, weatherList })
+      expect(weatherActions.fetchWeatherSuccess(weatherList)).deep.equal({ type: weatherActionsTypes.FETCH_WEATHER_SUCCESS, weatherList })
     })
 
     it('fetchWeatherError should create FETCH_WEATHER_ERROR action', () => {

@@ -4,11 +4,13 @@ import weatherActions from '../actions/weather'
 import WeatherSearch from '../components/WeatherSearch'
 
 export function mapStateToProps (state) {
-  return {}
+  return state.weather
 }
 
 export function mapDispatchToProps (dispatch) {
-  return {}
+  return {
+    actions: bindActionCreators(weatherActions, dispatch)
+  }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(WeatherSearch)

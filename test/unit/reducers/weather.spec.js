@@ -2,7 +2,6 @@ import {expect} from 'chai'
 import weatherActions from '../../../src/actions/weather'
 import weatherReducer from '../../../src/reducers/weather'
 
-
 describe('reducers', () => {
   describe('weather', () => {
     it('should handle initial state', () => {
@@ -62,7 +61,7 @@ describe('reducers', () => {
         error: null
       }
 
-      expect(weatherReducer(currentState, weatherActions.fetchWeatherSucces(weatherList))).deep.equal(expectedState)
+      expect(weatherReducer(currentState, weatherActions.fetchWeatherSuccess(weatherList))).deep.equal(expectedState)
     })
 
     it('should handle fetch weather error', () => {
